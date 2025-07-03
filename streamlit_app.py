@@ -70,6 +70,13 @@ Browse GDP data from the [World Bank Open Data](https://data.worldbank.org/) web
 notice, the data only goes to 2022 right now, and datapoints for certain years are often missing.
 But it's otherwise a great (and did I mention _free_?) source of data.
 '''
+st.image("LOGOCC.png",caption="2025")
+
+title = st.text_input("nombre del usuario", "escriba aqui")
+st.write("Lo que escribio es.....", title)
+
+number1 = st.number_input("Insert a numero")
+st.write("The current number is ", number1)
 
 # Add some spacing
 ''
@@ -83,6 +90,11 @@ from_year, to_year = st.slider(
     min_value=min_value,
     max_value=max_value,
     value=[min_value, max_value])
+
+
+año_estudio = st.number_input("que año le interesa ?",min_value=min_value,max_value=max_value,step=1)
+st.write("miraremos el año ", año_estudio)
+
 
 countries = gdp_df['Country Code'].unique()
 
